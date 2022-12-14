@@ -1,3 +1,4 @@
+@enroll
 Feature: Manage Costumer who enrolled in the course
   As a user
   I want to see enroll

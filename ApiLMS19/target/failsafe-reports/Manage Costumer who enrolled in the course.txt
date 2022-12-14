@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: Manage Costumer who enrolled in the course
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.787 s - in Manage Costumer who enrolled in the course

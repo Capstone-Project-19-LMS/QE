@@ -11,7 +11,7 @@ public class Update {
     private String url, token, id;
     public void setUrl(){
         url ="http://13.213.47.36/instructor/course/update/";
-        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzA2NTUwNzV9.Z2s3Ejr7kTUmEihPJN7AdBKChAjt5Te3ez79j5XgIvA";
+        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzA5OTQwMDZ9.-94oZ0J_QAG8DatmV4Bp5UQSioTX0pLbrBB2EAkoUjs";
         id ="de9170a38caf4e588f6bef26b29b884d";
     }
     public JSONObject updateBodyCourse(String name, String  desc, String objective, String catId){

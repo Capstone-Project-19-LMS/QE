@@ -9,7 +9,8 @@ public class Delete {
     private String url, token, id;
     public void setUrl(){
         url = "http://13.213.47.36/instructor/course/delete/";
-        token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzA2MDkyNzh9.LILCGa7LmzB8vs5kSmdzHwtmiX_x6-6SloHlJ3CEwyo";
+        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzA5OTQwMDZ9.-94oZ0J_QAG8DatmV4Bp5UQSioTX0pLbrBB2EAkoUjs";
+
         id="92be263df78b487ca7aeeb828d21a473";
     }
     public void requestDelete(){

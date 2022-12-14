@@ -10,7 +10,8 @@ public class Logout {
 
     public void setUrl(){
         url = "http://13.213.47.36/instructor/logout";
-        token = "ehbyJGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzA0MTQwMTN9.7phk4gMH6cLiWOFDt99PRStUBElzMrhkNAeHyT6wZDo";
+        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzA5OTQwMDZ9.-94oZ0J_QAG8DatmV4Bp5UQSioTX0pLbrBB2EAkoUjs";
+
     }
     public void request(){
         given().header("Authorization", "Bearer " + token)

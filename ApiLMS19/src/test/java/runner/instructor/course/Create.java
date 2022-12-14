@@ -11,7 +11,8 @@ public class Create {
     public void setUrl(){
         url = "http://13.213.47.36/instructor/course/create";
         //token nya pake punya naixxy
-        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzA2MDkyNzh9.LILCGa7LmzB8vs5kSmdzHwtmiX_x6-6SloHlJ3CEwyo";
+        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzA5OTQwMDZ9.-94oZ0J_QAG8DatmV4Bp5UQSioTX0pLbrBB2EAkoUjs";
+
     }
     public JSONObject bodyCourse(String name, String  desc, String objective, String catId){
         //String capacity, String catId, String instructorId
