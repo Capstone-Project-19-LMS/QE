@@ -4,4 +4,9 @@
    <name>default</name>
    <tag></tag>
    <defaultProfile>true</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'C:\\Users\\Dell\\spp-release.apk'</initValue>
+      <name>app_name</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
