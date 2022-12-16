@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'C:\\Users\\Dell\\spp-release.apk'</initValue>
+      <initValue>'C:\\Users\\Dell\\Downloads\\app-release.apk'</initValue>
       <name>app_name</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

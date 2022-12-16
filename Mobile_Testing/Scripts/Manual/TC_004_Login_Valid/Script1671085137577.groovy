@@ -19,31 +19,29 @@ import org.openqa.selenium.Keys as Keys
 
 int x = findTestData('Login').getRowNumbers()
 
-    Mobile.startApplication(GlobalVariable.app_name, false)
+Mobile.startApplication(GlobalVariable.app_name, true)
 
-    Mobile.tap(findTestObject('intropage/next_intro_Button'), 3)
+Mobile.tap(findTestObject('intropage/next_intro_Button'), 3)
 
-    Mobile.tap(findTestObject('intropage/next_intro2_Button'), 3)
+Mobile.tap(findTestObject('intropage/next_intro2_Button'), 3)
 
-    Mobile.tap(findTestObject('intropage/skip_page_Button'), 3)
+Mobile.tap(findTestObject('intropage/skip_page_Button'), 3)
 
 for (i = 1; i <= x; i++) {
-
-    Mobile.tap(findTestObject('loginpage/email_txt'), 3)
-
     Mobile.setText(findTestObject('loginpage/email_txt'), findTestData('Login').getValue(1, i), 0)
-
-    Mobile.tap(findTestObject('loginpage/password_txt'), 3)
 
     Mobile.setText(findTestObject('loginpage/password_txt'), findTestData('Login').getValue(2, i), 0)
 
     Mobile.tap(findTestObject('loginpage/login_Button'), 3)
 
-    Mobile.verifyElementExist(findTestObject('homepage/home_title'), 5)
+    if (findTestData('Login').getValue(2, i) == 'bixil79242') {
+        Mobile.verifyElementExist(findTestObject('homepage/home_title'), 5)
+    } else {
+        Mobile.verifyElementExist(findTestObject('loginpage/error_message'), 5)
 
+        Mobile.tap(findTestObject('loginpage/error_ok_Button'), 3)
+    }
 }
-
-
 
 Mobile.closeApplication()
 

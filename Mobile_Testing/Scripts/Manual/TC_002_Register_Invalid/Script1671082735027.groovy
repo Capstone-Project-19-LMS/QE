@@ -17,30 +17,32 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-int x = findTestData('Login').getRowNumbers()
+int x = findTestData('Register').getRowNumbers()
 
-    Mobile.startApplication(GlobalVariable.app_name, false)
+Mobile.startApplication(GlobalVariable.app_name, true)
 
-    Mobile.tap(findTestObject('intropage/next_intro_Button'), 3)
+Mobile.tap(findTestObject('intropage/next_intro_Button'), 3)
 
-    Mobile.tap(findTestObject('intropage/next_intro2_Button'), 3)
+Mobile.tap(findTestObject('intropage/next_intro2_Button'), 3)
 
-    Mobile.tap(findTestObject('intropage/skip_page_Button'), 3)
+Mobile.tap(findTestObject('intropage/skip_page_Button'), 3)
 
-    Mobile.tap(findTestObject('loginpage/to_register_page_Button'), 3)
+Mobile.scrollToText('Daftar', FailureHandling.STOP_ON_FAILURE)
+
+Mobile.tap(findTestObject('loginpage/to_register_page_Button'), 3)
 
 for (i = 1; i <= x; i++) {
     Mobile.tap(findTestObject('registerpage/name_txt'), 3)
 
-    Mobile.setText(findTestObject('registerpage/name_txt'), findTestData('Login').getValue(1, i), 0)
+    Mobile.setText(findTestObject('registerpage/name_txt'), findTestData('Register').getValue(1, i), 0)
 
     Mobile.tap(findTestObject('registerpage/email_txt'), 3)
 
-    Mobile.setText(findTestObject('registerpage/email_txt'), findTestData('Login').getValue(2, i), 0)
+    Mobile.setText(findTestObject('registerpage/email_txt'), findTestData('Register').getValue(2, i), 0)
 
     Mobile.tap(findTestObject('registerpage/password_txt'), 3)
 
-    Mobile.setText(findTestObject('registerpage/password_txt'), findTestData('Login').getValue(3, i), 0)
+    Mobile.setText(findTestObject('registerpage/password_txt'), findTestData('Register').getValue(3, i), 0)
 
     Mobile.checkElement(findTestObject('registerpage/privacy_checkbox'), 3)
 
@@ -49,7 +51,7 @@ for (i = 1; i <= x; i++) {
     Mobile.verifyElementExist(findTestObject('registerpage/error_message'), 3)
 
     Mobile.tap(findTestObject('registerpage/error_ok_Button'), 3)
-
 }
+
 Mobile.closeApplication()
 
