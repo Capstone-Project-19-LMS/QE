@@ -2,3 +2,6 @@
 - https://docs.google.com/document/d/11rJMngQHL_UNY9264IEQX8bvYLQVyf7c/edit?usp=sharing&ouid=107687171854742785847&rtpof=true&sd=true     Test Plan
 - https://docs.google.com/spreadsheets/d/1lRd79zqWiPVjATKfx8JFRqQvZEfW_NlYPDoThWlqZho/edit?usp=sharing           Test case/ Test scenario
 - https://docs.google.com/document/d/1N9ePnSdF0WKfoKjgT6B2trGpaYmzHT-C/edit        Bug Report
+- https://github.com/Capstone-Project-19-LMS/QE        QE
+- https://github.com/Capstone-Project-19-LMS/QE-API-CICD        CI/CD
+- https://trello.com/b/oNgQ5Ttj/kelompok-19-lms        Trello
