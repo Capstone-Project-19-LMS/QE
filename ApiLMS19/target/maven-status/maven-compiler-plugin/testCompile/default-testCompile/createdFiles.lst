@@ -1,5 +1,6 @@
 runner\stepdefinitions\Instructor\Category\CreateStep.class
 runner\stepdefinitions\Instructor\Course\Enroll\UpdateStep.class
+runner\instructor\category\Update.class
 runner\stepdefinitions\Instructor\Category\GetIdStep.class
 runner\instructor\course\Delete.class
 runner\stepdefinitions\Instructor\Category\GetAllStep.class
@@ -29,3 +30,4 @@ runner\stepdefinitions\Instructor\Auth\RegisterStep.class
 runner\stepdefinitions\Costumer\Auth.class
 runner\stepdefinitions\Instructor\Auth\LogoutStep.class
 runner\stepdefinitions\Instructor\Category\DeleteStep.class
+runner\instructor\category\GetId.class

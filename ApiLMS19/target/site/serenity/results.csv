@@ -1,3 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Manage Costumer who enrolled in the course","GET - Enroll costumer","SUCCESS","2022-12-14T11:42:22.3414226+07:00[Asia/Jakarta]","0.0","5.24"
-"Manage Costumer who enrolled in the course","PUT - Update enroll","SUCCESS","2022-12-14T11:42:27.6060413+07:00[Asia/Jakarta]","0.0","0.19"
+"Category","PUT - Update Category","SUCCESS","2022-12-18T12:13:25.8435169+07:00[Asia/Jakarta]","0.0","4.11"

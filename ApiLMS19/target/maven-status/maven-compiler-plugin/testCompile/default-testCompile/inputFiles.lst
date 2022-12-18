@@ -1,4 +1,5 @@
 C:\Users\alwi\IdeaProjects\ApiLMS19\src\test\java\runner\utils\InstGeneratedString.java
+C:\Users\alwi\IdeaProjects\ApiLMS19\src\test\java\runner\instructor\category\Update.java
 C:\Users\alwi\IdeaProjects\ApiLMS19\src\test\java\runner\instructor\auth\Logout.java
 C:\Users\alwi\IdeaProjects\ApiLMS19\src\test\java\runner\instructor\course\Delete.java
 C:\Users\alwi\IdeaProjects\ApiLMS19\src\test\java\runner\stepdefinitions\Instructor\Course\GetAllStep.java
@@ -9,6 +10,7 @@ C:\Users\alwi\IdeaProjects\ApiLMS19\src\test\java\runner\instructor\course\enrol
 C:\Users\alwi\IdeaProjects\ApiLMS19\src\test\java\runner\instructor\category\Delete.java
 C:\Users\alwi\IdeaProjects\ApiLMS19\src\test\java\runner\instructor\category\Create.java
 C:\Users\alwi\IdeaProjects\ApiLMS19\src\test\java\runner\instructor\course\GetAll.java
+C:\Users\alwi\IdeaProjects\ApiLMS19\src\test\java\runner\instructor\category\GetId.java
 C:\Users\alwi\IdeaProjects\ApiLMS19\src\test\java\runner\stepdefinitions\Instructor\Category\DeleteStep.java
 C:\Users\alwi\IdeaProjects\ApiLMS19\src\test\java\runner\stepdefinitions\Instructor\Course\CreateStep.java
 C:\Users\alwi\IdeaProjects\ApiLMS19\src\test\java\runner\stepdefinitions\Instructor\Course\DeleteStep.java
