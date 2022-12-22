@@ -23,11 +23,16 @@ Feature: Course
     |           |                            |                        |                                  | 400  | err |
 
   @delete
-  Scenario: DEL - As instructor Delete Course
+  Scenario Outline: DEL - As instructor Delete Course
     Given I set DELETE api endpoint for delete course
-    When I send DELETE HTTP request for delete course
-    Then I receive valid HTTP respone code delete course
-    And I receive valid data for delete course
+    When I send DELETE HTTP request for delete course "<status>"
+    Then I receive valid HTTP respone code delete course "<code>"
+    And I receive valid data for delete course "<status>"
+    Examples:
+    | status  | code |
+    | ok      | 200  |
+    | inv      | 404  |
+    | invToken      | 400  |
 
   @getall
   Scenario: GET - As instructor get all course
@@ -37,11 +42,15 @@ Feature: Course
     And I receive valid data for get all course
 
   @getid
-  Scenario: GET - As instructor get course ID
+  Scenario Outline: GET - As instructor get course ID
     Given I set GET id api endpoint for get course id
-    When I send GET HTTP request for get course id
-    Then I receive valid HTTP respone code get course id
-    And I receive valid data for get course id
+    When I send GET HTTP request for get course id "<id>"
+    Then I receive valid HTTP respone code get course id "<code>"
+    And I receive valid data for get course id "<code>"
+    Examples:
+    | id      | code |
+    | valid   | 200  |
+    | invalid | 404  |
 
   @update
   Scenario Outline: PUT - As instructor update course
@@ -52,4 +61,6 @@ Feature: Course
     Examples:
     | name      | desc                              | objective             | catId                            | code | status |
     | valid     | Pembelajaran mencari cinta sejati | materi bucin          | 188da0ffa87c4f5084f267d54937e43b | 200  | ok |
+    | valid     | Pembelajaran mencari cinta sejati | materi bucin          | 188da0ffa87c4f5084f267d54937e43b | 404  | inv |
+    | valid     | Pembelajaran mencari cinta sejati | materi bucin          | 188da0ffa87c4f5084f267d54937e43b | 400  | invToken |
 

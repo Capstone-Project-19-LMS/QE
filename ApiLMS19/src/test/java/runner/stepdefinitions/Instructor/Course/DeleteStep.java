@@ -15,18 +15,36 @@ public class DeleteStep {
         d.setUrl();
     }
 
-    @When("I send DELETE HTTP request for delete course")
-    public void iSendDELETEHTTPRequestForDeleteCourse() {
-        d.requestDelete();
+    @When("I send DELETE HTTP request for delete course {string}")
+    public void iSendDELETEHTTPRequestForDeleteCourse(String status) {
+        if (status.equals("ok")){
+            d.requestDelete();
+        }else if(status.equals("inv")){
+            d.requestDeleteInv();
+        }else if(status.equals("invToken")){
+            d.requestDeleteInvToken();
+        }
     }
 
-    @Then("I receive valid HTTP respone code delete course")
-    public void iReceiveValidHTTPResponeCodeDeleteCourse() {
-        d.statusCode200();
+    @Then("I receive valid HTTP respone code delete course {string}")
+    public void iReceiveValidHTTPResponeCodeDeleteCourse(String code) {
+        if (code.equals("200")){
+            d.statusCode200();
+        }else if(code.equals("404")){
+            d.statusCode404();
+        }else if(code.equals("400")){
+            d.statusCode400();
+        }
     }
 
-    @And("I receive valid data for delete course")
-    public void iReceiveValidDataForDeleteCourse() {
-        d.validate200();
+    @And("I receive valid data for delete course {string}")
+    public void iReceiveValidDataForDeleteCourse(String status) {
+        if (status.equals("200")){
+            d.validate200();
+        }else if(status.equals("404")){
+            d.validate404();
+        }else if(status.equals("401")){
+            d.validate400();
+        }
     }
 }

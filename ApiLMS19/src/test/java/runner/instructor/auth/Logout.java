@@ -9,7 +9,7 @@ public class Logout {
     private String url, token;
 
     public void setUrl(){
-        url = "http://13.213.47.36/instructor/logout";
+        url = "https://gencer.live/instructor/logout";
         token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzA5OTQwMDZ9.-94oZ0J_QAG8DatmV4Bp5UQSioTX0pLbrBB2EAkoUjs";
 
     }

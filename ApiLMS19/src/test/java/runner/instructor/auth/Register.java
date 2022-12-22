@@ -11,7 +11,7 @@ public class Register {
     private String url;
 
     public void setUrl(){
-        url = "http://13.213.47.36/instructor/register";
+        url = "https://gencer.live/instructor/register";
 
     }
     public JSONObject bodyRegister(String name, String email, String password){

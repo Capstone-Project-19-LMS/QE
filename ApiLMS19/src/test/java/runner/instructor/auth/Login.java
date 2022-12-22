@@ -10,7 +10,7 @@ public class Login {
     private String url;
 
     public void setUrl(){
-        url = "http://13.213.47.36/instructor/login";
+        url = "https://gencer.live/instructor/login";
     }
     public JSONObject bodyLogin(String email, String password){
         JSONObject body = new JSONObject();

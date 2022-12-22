@@ -1,3 +1,4 @@
+@CAT
 Feature: Category
   As a user
   I want to category

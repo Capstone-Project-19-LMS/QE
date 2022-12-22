@@ -12,9 +12,8 @@ public class Create {
     private String url, token;
 
     public void setUrl(){
-        url = "http://13.213.47.36/instructor/category/create";
-        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzA5OTQwMDZ9.-94oZ0J_QAG8DatmV4Bp5UQSioTX0pLbrBB2EAkoUjs";
-
+        url = "https://gencer.live/instructor/category/create";
+        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzE2OTE4NzN9.O00LrDtNUKZuCJO2EVcrp68jhUsPUH4njJIhv9P9rls";
     }
     public JSONObject bodyCategory(){
 //        if(name.equals("valid")){
@@ -23,7 +22,7 @@ public class Create {
 //            name = "coba";
 //        }
         JSONObject body = new JSONObject();
-        body.put("name", "coba 6");
+        body.put("name", "coba 10");
         body.put("description", "mencoba testing category coba 6");
         return body;
     }

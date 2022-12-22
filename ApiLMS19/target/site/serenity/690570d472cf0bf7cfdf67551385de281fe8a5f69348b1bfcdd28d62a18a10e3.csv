@@ -1,2 +1,6 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Category","PUT - Update Category","SUCCESS","2022-12-18T12:13:25.8435169+07:00[Asia/Jakarta]","0.0","4.11"
+"Course","POST - As instructor Create new Course","SUCCESS","2022-12-22T14:17:05.830203+07:00[Asia/Jakarta]","0.0","5.75"
+"Course","DEL - As instructor Delete Course","SUCCESS","2022-12-22T14:17:11.5863793+07:00[Asia/Jakarta]","0.0","0.58"
+"Course","GET - As instructor get all course","SUCCESS","2022-12-22T14:17:12.1744787+07:00[Asia/Jakarta]","0.0","0.92"
+"Course","GET - As instructor get course ID","SUCCESS","2022-12-22T14:17:13.1029493+07:00[Asia/Jakarta]","0.0","0.42"
+"Course","PUT - As instructor update course","SUCCESS","2022-12-22T14:17:13.5341904+07:00[Asia/Jakarta]","0.0","0.66"

@@ -148,7 +148,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [];
+            var requirementsTree = [{"text":"Course","type":"feature","href":"2d4ddf70d3f517dc4bbfec92d1d0e8d13f21b0b2d42f8bbd8639b3fba13989fe.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027fa fa-check-circle-o success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e5 scenarios\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -194,6 +194,7 @@
             <span class="breadcrumbs">
             <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
 
+                > <a href="df96fd654871242f5fae3c73529a01e4aeece1efc489d4e5f16ee9d0109e48ea.html">Instructor</a>
 
 
                     > <span class="truncate-40">Course</span>
@@ -221,7 +222,7 @@
             <a href="#"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated </span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 22-12-2022 14:17</span>
     <br style="clear:left"/>
 </div>
 
@@ -235,11 +236,31 @@
                     <div>
                         <div clas="table">
                             <div class="row">
-                                    <div class="col-sm-12">
+                                <div class="col-sm-8">
                                         <span>
                                             <h2><i class="fa fa-book"></i> Feature:  Course</h2>
                                         </span>
                                     </div>
+                                        <div class="col-sm-4">
+                                        <span class="feature-tags">
+                                                <p class="tag">
+                                                    <span class="badge tag-badge" style="background:default;">
+                                                        <i class="fa fa-tag"></i>&nbsp;<a class="tagLink"
+                                                                                          style="background:default;"
+                                                                                          href="8a3bc09a923c355f816713ee3a08e2a1ebbbdfd601e39c92a1e55397f1398982.html">Course
+                                                        (tag)</a>
+                                                    </span>
+                                                </p>
+                                                <p class="tag">
+                                                    <span class="badge tag-badge" style="background:default;">
+                                                        <i class="fa fa-tag"></i>&nbsp;<a class="tagLink"
+                                                                                          style="background:default;"
+                                                                                          href="f6d12790a0551b86619eb89e30699ed55ae402fc4e37d2afa8bfcaaad0c4c757.html">Update
+                                                        (tag)</a>
+                                                    </span>
+                                                </p>
+                                        </span>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -274,10 +295,362 @@ So I can manage my course instructor
                                         <div class="row">
                                             <div class="col-sm-12">
 
-                                                    <h3>Requirements Overview</h3>
+                                                    <!--- TOC --->
+                                                    <div id="toc">
+                                                        <h3>Overview</h3>
+                                                        <table class="table" id="toc-table">
+                                                                        <tr>
+                                                                            <td style="width:95%;" class="toc-title">
+                                                                                <span class="orphan-scenario-toc-entry">
+                                                                                    <a href="#d35c94358c069c6363e588f9232b9e81c66dcf69b576c45d2e10a01473c54f52" title="View scenario details">
+                                                                                        <i class="far fa-comment-dots"></i> Scenario Outline: POST - As instructor Create new Course
+                                                                                    </a>
+                                                                                        (8 examples)
+                                                                                </span>
+                                                                            </td>
+                                                                            <td style="width:5%;">
+                                                                                <table>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                               href="d0cb8c5c43cecff93c472f4b37d02ccf39bffb573a7851478373f81af758f7fc.html"
+                                                                                               title="View test results">
+                                                                                                <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                                                                </a>
 
-                                                    <div id="tree"></div>
 
+                                                                                        </td>
+                                                                                            <td>
+                                                                                                <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                                   href="d0cb8c5c43cecff93c472f4b37d02ccf39bffb573a7851478373f81af758f7fc.html"
+                                                                                                   title="View test results">
+                                                                                                    <i class="fas fa-search-plus"></i>
+                                                                                                </a>
+                                                                                            </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="width:95%;" class="toc-title">
+                                                                                <span class="orphan-scenario-toc-entry">
+                                                                                    <a href="#f99385903f638a5b3044170b055b487fb14bc891a96d0a6ae8c1a8188fcc0ea6" title="View scenario details">
+                                                                                        <i class="far fa-comment-dots"></i> Scenario Outline: DEL - As instructor Delete Course
+                                                                                    </a>
+                                                                                        (3 examples)
+                                                                                </span>
+                                                                            </td>
+                                                                            <td style="width:5%;">
+                                                                                <table>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                               href="aab48271dd60c5e576c09823159382988706eae0e45b523c3773da898028d2a9.html"
+                                                                                               title="View test results">
+                                                                                                <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                                                                </a>
+
+
+                                                                                        </td>
+                                                                                            <td>
+                                                                                                <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                                   href="aab48271dd60c5e576c09823159382988706eae0e45b523c3773da898028d2a9.html"
+                                                                                                   title="View test results">
+                                                                                                    <i class="fas fa-search-plus"></i>
+                                                                                                </a>
+                                                                                            </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="width:95%;" class="toc-title">
+                                                                                <span class="orphan-scenario-toc-entry">
+                                                                                    <a href="#b0693c24af554d9a1e2b6c2bc3f703049394de25a0e5256871458400bc20c0ef" title="View scenario details">
+                                                                                        <i class="far fa-comment-dots"></i> Scenario: GET - As instructor get all course
+                                                                                    </a>
+                                                                                </span>
+                                                                            </td>
+                                                                            <td style="width:5%;">
+                                                                                <table>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                               href="479caa8b016b5766981d7e1d4790bd307e70c1fe516b7e3e3c7663038c08dd9f.html"
+                                                                                               title="View test results">
+                                                                                                <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                                                                </a>
+
+
+                                                                                        </td>
+                                                                                            <td>
+                                                                                                <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                                   href="479caa8b016b5766981d7e1d4790bd307e70c1fe516b7e3e3c7663038c08dd9f.html"
+                                                                                                   title="View test results">
+                                                                                                    <i class="fas fa-search-plus"></i>
+                                                                                                </a>
+                                                                                            </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="width:95%;" class="toc-title">
+                                                                                <span class="orphan-scenario-toc-entry">
+                                                                                    <a href="#22f69b019f8f0fc16ac024bd560003f03a19af909e0396c1eb17d5cd173f6942" title="View scenario details">
+                                                                                        <i class="far fa-comment-dots"></i> Scenario Outline: GET - As instructor get course ID
+                                                                                    </a>
+                                                                                        (2 examples)
+                                                                                </span>
+                                                                            </td>
+                                                                            <td style="width:5%;">
+                                                                                <table>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                               href="c26c65dc4ac8d9a7e60e5fc9fb33d28e9d4e07e681e539f67b81bdd847b5356e.html"
+                                                                                               title="View test results">
+                                                                                                <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                                                                </a>
+
+
+                                                                                        </td>
+                                                                                            <td>
+                                                                                                <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                                   href="c26c65dc4ac8d9a7e60e5fc9fb33d28e9d4e07e681e539f67b81bdd847b5356e.html"
+                                                                                                   title="View test results">
+                                                                                                    <i class="fas fa-search-plus"></i>
+                                                                                                </a>
+                                                                                            </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="width:95%;" class="toc-title">
+                                                                                <span class="orphan-scenario-toc-entry">
+                                                                                    <a href="#41ae27f2b5183189ac755b207fb1431e31b9bf8945827fcb3a89875e35f50e83" title="View scenario details">
+                                                                                        <i class="far fa-comment-dots"></i> Scenario Outline: PUT - As instructor update course
+                                                                                    </a>
+                                                                                        (3 examples)
+                                                                                </span>
+                                                                            </td>
+                                                                            <td style="width:5%;">
+                                                                                <table>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                               href="00dcacb6b4f1480f288160f6103589890a5b5b3fc4b9d17206963817215ecb91.html"
+                                                                                               title="View test results">
+                                                                                                <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                                                                </a>
+
+
+                                                                                        </td>
+                                                                                            <td>
+                                                                                                <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                                   href="00dcacb6b4f1480f288160f6103589890a5b5b3fc4b9d17206963817215ecb91.html"
+                                                                                                   title="View test results">
+                                                                                                    <i class="fas fa-search-plus"></i>
+                                                                                                </a>
+                                                                                            </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                        </table>
+                                                    </div>
+                                                    <!--- END OF TOC --->
+
+                                                    <h3>Scenarios</h3>
+
+                                                        <a name="15a9d0f2-993d-4432-9442-bf4bd40d4232" ></a>
+
+
+                                                            <div class="scenario-docs card" id="d35c94358c069c6363e588f9232b9e81c66dcf69b576c45d2e10a01473c54f52">
+                                                                <div class="scenario-docs card-header success"
+                                                                     style="min-height:1.5em;">
+                                                                    <div>
+                                                            <span class="scenario-heading">
+                                                                <a href="d0cb8c5c43cecff93c472f4b37d02ccf39bffb573a7851478373f81af758f7fc.html"
+                                                                   title="View test results">Scenario Outline: POST - As instructor Create new Course</a>
+                                                            </span>
+                                                                        <span class="scenario-result-icon">
+                                                                
+
+                                                                                <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                            </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="scenario-docs card-body">
+                                                                        <p>Given I set POST api endpoints for new course</p>
+                                                                        <p>When I send POST HTTP request for new course &quot;{name}&quot; &quot;{desc}&quot; &quot;{objective}&quot; &quot;{catId}&quot; &quot;{status}&quot;</p>
+                                                                        <p>Then I receive valid HTTP respone code &quot;{code}&quot;</p>
+                                                                        <p>And I receive valid data for new course &quot;{status}&quot;</p>
+                                                                    <div class="examples">
+                                                                            <p><p>Examples:</p>
+<blockquote>
+</blockquote>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>name</th><th>desc</th><th>objective</th><th>catId</th><th>code</th><th>status</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>valid</td><td>pembelajaran bahasa java 1</td><td>materi java 1</td><td>188da0ffa87c4f5084f267d54937e43b</td><td>200</td><td>ok</td><td><a href='d0cb8c5c43cecff93c472f4b37d02ccf39bffb573a7851478373f81af758f7fc.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+<tr><td>valid</td><td>pembelajaran bahasa java 1</td><td>materi java 1</td><td>188da0ffa87c4f5084f267d54937e43b</td><td>400</td><td>without</td><td><a href='d0cb8c5c43cecff93c472f4b37d02ccf39bffb573a7851478373f81af758f7fc.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+<tr><td>valid</td><td>pembelajaran bahasa java 1</td><td>materi java 1</td><td>188da0ffa87c4f5084f267d54937e43b</td><td>401</td><td>inv</td><td><a href='d0cb8c5c43cecff93c472f4b37d02ccf39bffb573a7851478373f81af758f7fc.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+<tr><td>duplicate</td><td>pembelajaran bahasa java 1</td><td>materi java 1</td><td>188da0ffa87c4f5084f267d54937e43b</td><td>500</td><td>err</td><td><a href='d0cb8c5c43cecff93c472f4b37d02ccf39bffb573a7851478373f81af758f7fc.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+<tr><td>valid</td><td></td><td>materi java 1</td><td>188da0ffa87c4f5084f267d54937e43b</td><td>400</td><td>ok</td><td><a href='d0cb8c5c43cecff93c472f4b37d02ccf39bffb573a7851478373f81af758f7fc.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+<tr><td>valid</td><td>pembelajaran bahasa java 1</td><td></td><td>188da0ffa87c4f5084f267d54937e43b</td><td>200</td><td>ok</td><td><a href='d0cb8c5c43cecff93c472f4b37d02ccf39bffb573a7851478373f81af758f7fc.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+<tr><td>valid</td><td>pembelajaran bahasa java 1</td><td>materi java 1</td><td></td><td>400</td><td>err</td><td><a href='d0cb8c5c43cecff93c472f4b37d02ccf39bffb573a7851478373f81af758f7fc.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+<tr><td></td><td></td><td></td><td></td><td>400</td><td>err</td><td><a href='d0cb8c5c43cecff93c472f4b37d02ccf39bffb573a7851478373f81af758f7fc.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="scenario-docs card" id="f99385903f638a5b3044170b055b487fb14bc891a96d0a6ae8c1a8188fcc0ea6">
+                                                                <div class="scenario-docs card-header success"
+                                                                     style="min-height:1.5em;">
+                                                                    <div>
+                                                            <span class="scenario-heading">
+                                                                <a href="aab48271dd60c5e576c09823159382988706eae0e45b523c3773da898028d2a9.html"
+                                                                   title="View test results">Scenario Outline: DEL - As instructor Delete Course</a>
+                                                            </span>
+                                                                        <span class="scenario-result-icon">
+                                                                
+
+                                                                                <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                            </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="scenario-docs card-body">
+                                                                        <p>Given I set DELETE api endpoint for delete course</p>
+                                                                        <p>When I send DELETE HTTP request for delete course &quot;{status}&quot;</p>
+                                                                        <p>Then I receive valid HTTP respone code delete course &quot;{code}&quot;</p>
+                                                                        <p>And I receive valid data for delete course &quot;{status}&quot;</p>
+                                                                    <div class="examples">
+                                                                            <p><p>Examples:</p>
+<blockquote>
+</blockquote>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>status</th><th>code</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>ok</td><td>200</td><td><a href='aab48271dd60c5e576c09823159382988706eae0e45b523c3773da898028d2a9.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+<tr><td>inv</td><td>404</td><td><a href='aab48271dd60c5e576c09823159382988706eae0e45b523c3773da898028d2a9.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+<tr><td>invToken</td><td>400</td><td><a href='aab48271dd60c5e576c09823159382988706eae0e45b523c3773da898028d2a9.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="scenario-docs card" id="b0693c24af554d9a1e2b6c2bc3f703049394de25a0e5256871458400bc20c0ef">
+                                                                <div class="scenario-docs card-header success"
+                                                                     style="min-height:1.5em;">
+                                                                    <div>
+                                                            <span class="scenario-heading">
+                                                                <a href="479caa8b016b5766981d7e1d4790bd307e70c1fe516b7e3e3c7663038c08dd9f.html"
+                                                                   title="View test results">Scenario: GET - As instructor get all course</a>
+                                                            </span>
+                                                                        <span class="scenario-result-icon">
+                                                                
+
+                                                                                <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                            </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="scenario-docs card-body">
+                                                                        <p>Given I set GET all api endpoint for get all course</p>
+                                                                        <p>When I send GET HTTP request for get all course</p>
+                                                                        <p>Then I receive valid HTTP respone code get all course</p>
+                                                                        <p>And I receive valid data for get all course</p>
+                                                                    <div class="examples">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="scenario-docs card" id="22f69b019f8f0fc16ac024bd560003f03a19af909e0396c1eb17d5cd173f6942">
+                                                                <div class="scenario-docs card-header success"
+                                                                     style="min-height:1.5em;">
+                                                                    <div>
+                                                            <span class="scenario-heading">
+                                                                <a href="c26c65dc4ac8d9a7e60e5fc9fb33d28e9d4e07e681e539f67b81bdd847b5356e.html"
+                                                                   title="View test results">Scenario Outline: GET - As instructor get course ID</a>
+                                                            </span>
+                                                                        <span class="scenario-result-icon">
+                                                                
+
+                                                                                <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                            </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="scenario-docs card-body">
+                                                                        <p>Given I set GET id api endpoint for get course id</p>
+                                                                        <p>When I send GET HTTP request for get course id &quot;{id}&quot;</p>
+                                                                        <p>Then I receive valid HTTP respone code get course id &quot;{code}&quot;</p>
+                                                                        <p>And I receive valid data for get course id &quot;{code}&quot;</p>
+                                                                    <div class="examples">
+                                                                            <p><p>Examples:</p>
+<blockquote>
+</blockquote>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>id</th><th>code</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>valid</td><td>200</td><td><a href='c26c65dc4ac8d9a7e60e5fc9fb33d28e9d4e07e681e539f67b81bdd847b5356e.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+<tr><td>invalid</td><td>404</td><td><a href='c26c65dc4ac8d9a7e60e5fc9fb33d28e9d4e07e681e539f67b81bdd847b5356e.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="scenario-docs card" id="41ae27f2b5183189ac755b207fb1431e31b9bf8945827fcb3a89875e35f50e83">
+                                                                <div class="scenario-docs card-header success"
+                                                                     style="min-height:1.5em;">
+                                                                    <div>
+                                                            <span class="scenario-heading">
+                                                                <a href="00dcacb6b4f1480f288160f6103589890a5b5b3fc4b9d17206963817215ecb91.html"
+                                                                   title="View test results">Scenario Outline: PUT - As instructor update course</a>
+                                                            </span>
+                                                                        <span class="scenario-result-icon">
+                                                                
+
+                                                                                <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                            </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="scenario-docs card-body">
+                                                                        <p>Given I set PUT api endpoint for update course</p>
+                                                                        <p>When I send PUT HTTP request for update course &quot;{name}&quot; &quot;{desc}&quot; &quot;{objective}&quot; &quot;{catId}&quot; &quot;{status}&quot;</p>
+                                                                        <p>Then I receive valid HTTP respone code update course &quot;{code}&quot;</p>
+                                                                        <p>And I receive valid data for update course &quot;{status}&quot;</p>
+                                                                    <div class="examples">
+                                                                            <p><p>Examples:</p>
+<blockquote>
+</blockquote>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>name</th><th>desc</th><th>objective</th><th>catId</th><th>code</th><th>status</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>valid</td><td>Pembelajaran mencari cinta sejati</td><td>materi bucin</td><td>188da0ffa87c4f5084f267d54937e43b</td><td>200</td><td>ok</td><td><a href='00dcacb6b4f1480f288160f6103589890a5b5b3fc4b9d17206963817215ecb91.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+<tr><td>valid</td><td>Pembelajaran mencari cinta sejati</td><td>materi bucin</td><td>188da0ffa87c4f5084f267d54937e43b</td><td>404</td><td>inv</td><td><a href='00dcacb6b4f1480f288160f6103589890a5b5b3fc4b9d17206963817215ecb91.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+<tr><td>valid</td><td>Pembelajaran mencari cinta sejati</td><td>materi bucin</td><td>188da0ffa87c4f5084f267d54937e43b</td><td>400</td><td>invToken</td><td><a href='00dcacb6b4f1480f288160f6103589890a5b5b3fc4b9d17206963817215ecb91.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                             </div>
                                         </div>
                                     </div>
@@ -286,7 +659,41 @@ So I can manage my course instructor
                                 <div id="results" class="tab-pane fade">
                                     <div class="container-fluid">
                                         <div class="row">
-                                                <div class="col-sm-12">
+                                            <div class="col-sm-4">
+
+                                                <div style="width:300px;" class="chart-container automated-and-manual-results">
+                                                    <div class="ct-chart ct-square"></div>
+                                                </div>
+                                                <script>
+
+                                                    var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+                                                    // Our series array that contains series objects or in this case series data arrays
+
+                                                    var series = [{meta: 'Passing tests (automated)', value: 17}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+
+                                                    // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
+                                                    // as you saw in the previous example
+                                                    var options = {
+                                                        width: 350,
+                                                        height: 300
+                                                    };
+
+                                                    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                                                        new Chartist.Pie('.ct-chart', {
+                                                            series: series,
+                                                            labels: labels,
+                                                        }, {
+                                                            donut: true,
+                                                            donutWidth: 60,
+                                                            donutSolid: true,
+                                                            startAngle: 270,
+                                                            showLabel: true
+                                                        }, options);
+                                                    });
+
+                                                </script>
+                                            </div>
+                                            <div class="col-sm-8">
 
                                                     <table class="table">
                                                         <thead>
@@ -301,11 +708,12 @@ So I can manage my course instructor
                                                         </thead>
                                                         <tbody>
                                                         <tr>
-                                                                <td class="aggregate-result-count"><i
-                                                                            class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing
+                                                                <td class="aggregate-result-count">
+                                                                    <a href="dd1ae59e613c32ec42cee661267566badaefd85518740442b11018a413b7c75e.html"><i
+                                                                                class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
                                                                 </td>
-                                                            <td class="automated-stats">0</td>
-                                                            <td class="automated-stats"> </td>
+                                                            <td class="automated-stats">17</td>
+                                                            <td class="automated-stats">100%</td>
                                                         </tr>
                                                         <tr>
                                                                 <td class="aggregate-result-count"><i
@@ -359,7 +767,7 @@ So I can manage my course instructor
                                                         </tr>
                                                         <tr class="summary-stats">
                                                             <td class="aggregate-result-count">Total</td>
-                                                            <td class="automated-stats">0</td>
+                                                            <td class="automated-stats">17</td>
                                                             <td class="automated-stats"></td>
                                                         </tr>
                                                         </tbody>
@@ -381,11 +789,11 @@ So I can manage my course instructor
                                                         </thead>
                                                         <tbody>
                                                         <tr>
-                                                            <td>0ms</td>
-                                                            <td>0ms</td>
-                                                            <td>0ms</td>
-                                                            <td>0ms</td>
-                                                            <td>0ms</td>
+                                                            <td>8s</td>
+                                                            <td>7s</td>
+                                                            <td>172ms</td>
+                                                            <td>4s</td>
+                                                            <td>1s</td>
                                                         </tr>
                                                         </tbody>
                                                     </table>
@@ -397,7 +805,84 @@ So I can manage my course instructor
                                                 <div class="col-sm-12">
                                                     <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
 
-                                                        No automated tests were executed
+                                                        <table class="scenario-result-table table"
+                                                               id="scenario-results">
+                                                            <thead>
+                                                            <tr>
+                                                                <th class="test-name-column">Scenario</th>
+                                                                <th>Steps</th>
+                                                                <th>Started</th>
+                                                                <th>Duration</th>
+                                                                <th>Result</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="scenario-result SUCCESS">
+                                                                    <td>
+                                                                            <a href="d0cb8c5c43cecff93c472f4b37d02ccf39bffb573a7851478373f81af758f7fc.html">POST - As instructor Create new Course</a>
+                                                                            (8 examples)
+                                                                    </td>
+                                                                    <td>4</td>
+                                                                    <td>14:17:05</td>
+                                                                    <td>5s 749ms</td>
+                                                                    <td>
+                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                style="display:none">SUCCESS</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result SUCCESS">
+                                                                    <td>
+                                                                            <a href="aab48271dd60c5e576c09823159382988706eae0e45b523c3773da898028d2a9.html">DEL - As instructor Delete Course</a>
+                                                                            (3 examples)
+                                                                    </td>
+                                                                    <td>4</td>
+                                                                    <td>14:17:11</td>
+                                                                    <td>581ms</td>
+                                                                    <td>
+                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                style="display:none">SUCCESS</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result SUCCESS">
+                                                                    <td>
+                                                                            <a href="479caa8b016b5766981d7e1d4790bd307e70c1fe516b7e3e3c7663038c08dd9f.html">GET - As instructor get all course</a>
+                                                                    </td>
+                                                                    <td>4</td>
+                                                                    <td>14:17:12</td>
+                                                                    <td>917ms</td>
+                                                                    <td>
+                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                style="display:none">SUCCESS</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result SUCCESS">
+                                                                    <td>
+                                                                            <a href="c26c65dc4ac8d9a7e60e5fc9fb33d28e9d4e07e681e539f67b81bdd847b5356e.html">GET - As instructor get course ID</a>
+                                                                            (2 examples)
+                                                                    </td>
+                                                                    <td>4</td>
+                                                                    <td>14:17:13</td>
+                                                                    <td>421ms</td>
+                                                                    <td>
+                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                style="display:none">SUCCESS</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result SUCCESS">
+                                                                    <td>
+                                                                            <a href="00dcacb6b4f1480f288160f6103589890a5b5b3fc4b9d17206963817215ecb91.html">PUT - As instructor update course</a>
+                                                                            (3 examples)
+                                                                    </td>
+                                                                    <td>4</td>
+                                                                    <td>14:17:13</td>
+                                                                    <td>659ms</td>
+                                                                    <td>
+                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                style="display:none">SUCCESS</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
 
                                                 </div>
                                             </div>

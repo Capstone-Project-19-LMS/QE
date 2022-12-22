@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>GET - As instructor get all course</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff"><!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<!-- ImgPreview -->
+<script src="scripts/imgpreview.full.jquery.js" type="text/javascript"></script>
+</head>
+
+<body class="results-page">
+
+
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+        <span class="breadcrumbs">
+            <a href="index.html" class="breadcrumbs">Home</a>
+
+            > <a href="df96fd654871242f5fae3c73529a01e4aeece1efc489d4e5f16ee9d0109e48ea.html">Instructor</a>
+            > <a href="2d4ddf70d3f517dc4bbfec92d1d0e8d13f21b0b2d42f8bbd8639b3fba13989fe.html">Course</a>
+        > GET - As instructor get all course
+        </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 22-12-2022 14:17</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                                <div>
+                                    <h3 class="discreet-story-header">
+                                        <i class="fa fa-2x fa-comments-o"></i>
+                                        <span class="story-header-title">Course </span>
+                                    </h3>
+
+                                </div>
+
+                        </td>
+                        <td valign="top">
+                                <p class="tag">
+                                    <span class="badge tag-badge" style="background:default;">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="dfa41cbda476509f4fe91f1236f90f56b607c695a1c2f949afb368950c2ce6d7.html">Getall
+                                    (tag)</a>
+                                </span>
+                                </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">
+                                    GET - As instructor get all course
+                                        <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+
+
+    <div id="tablecontents">
+        <div>
+            <table class="step-table">
+                <tr class="step-titles">
+                    <th width="65">
+                    </th>
+                    <th class="step-description-column greentext">
+                        Steps
+                    </th>
+
+                    <th width="130" class="greentext">Outcome</th>
+                    <th width="100" class="greentext"><i title="Duration" class="far fa-clock"></i></th>
+                </tr>
+                <tr class="step-table-separator">
+                    <td colspan="5"></td>
+                </tr>
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="50" class="step-icon">
+                            <a name="0"></a>
+                                <span style="margin-left: 20px;"
+                                      class="top-level-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="top-level-step">
+                                                Given I set GET all api endpoint for get all course
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">009ms</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="50" class="step-icon">
+                            <a name="1"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection1 success-icon"
+                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                                   style="display:block;">
+                                    <span class="top-level-step">
+                                                When I send GET HTTP request for get all course
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">226ms</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection1" class="step-table-nested" style="display:none;">
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="1-0"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                GET https://gencer.live/instructor/course/get_all
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-3">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>URL: https://gencer.live/instructor/course/get_all</p>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzE2OTk2NzR9.A8aX02Z2kV8S9oKbvzgpYoYq3QpDWlzUoXJgdWbScek<br>Accept=*/*</pre>
+                                        <h4>Content Body</h4>
+                                        <pre></pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Server: nginx/1.18.0 (Ubuntu)<br>Date: Thu, 22 Dec 2022 07:17:12 GMT<br>Content-Type: application/json; charset=UTF-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Vary: Origin<br>Strict-Transport-Security: âmax-age=15768000â</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>{<br>    &quot;amount_course&quot;: 33,<br>    &quot;amount_customer_course&quot;: 8,<br>    &quot;amount_materi&quot;: 0,<br>    &quot;courses&quot;: [<br>        {<br>            &quot;id&quot;: &quot;0b899c81b8b247d28a255cf33b06c51e&quot;,<br>            &quot;name&quot;: &quot;java no 116&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 12,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 3<br>        },<br>        {<br>            &quot;id&quot;: &quot;0fd47b533e1e46318dcab63761d95eb7&quot;,<br>            &quot;name&quot;: &quot;java no 703&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 13,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 2<br>        },<br>        {<br>            &quot;id&quot;: &quot;1d328ca9161c4ba89b69e36b319e1cbc&quot;,<br>            &quot;name&quot;: &quot;testing111&quot;,<br>            &quot;description&quot;: &quot;pembelajran bahasa java&quot;,<br>            &quot;objective&quot;: &quot;materi java&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 19,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;09a65e7b400a459cb951391f9305b1b5&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-09T11:44:22.039Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-09T11:44:22.039Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;coba 2&quot;,<br>                &quot;description&quot;: &quot;programming language js for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 1<br>        },<br>        {<br>            &quot;id&quot;: &quot;1e3e059075f9454ba0e4f8d2c55c9b93&quot;,<br>            &quot;name&quot;: &quot;java no 616&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;materi java 1&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;1f8bf8cd5b254db992d4318153656791&quot;,<br>            &quot;name&quot;: &quot;jav&quot;,<br>            &quot;description&quot;: &quot;pembelajran bahasa java&quot;,<br>            &quot;objective&quot;: &quot;materi java&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 20,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;4a3d3b08f9ee4ce0aea83934045eeb50&quot;,<br>            &quot;name&quot;: &quot;java no 693&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;materi java 1&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;4df998d5efc844f59753fb2ac5d8adbe&quot;,<br>            &quot;name&quot;: &quot;coba atas nama naixxy2&quot;,<br>            &quot;description&quot;: &quot;pembelajran bahasa cinta&quot;,<br>            &quot;objective&quot;: &quot;materi cinta yang sangat mujarab&quot;,<br>            &quot;price&quot;: 20000,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 20,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;57988b44a0f5495bb32e46d60be7a574&quot;,<br>            &quot;name&quot;: &quot;java no 420&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;5fcd83d2986d42ac9d66b971d1798b2e&quot;,<br>            &quot;name&quot;: &quot;testing21&quot;,<br>            &quot;description&quot;: &quot;pembelajran bahasa java&quot;,<br>            &quot;objective&quot;: &quot;&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 20,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;&quot;,<br>                &quot;created_at&quot;: &quot;0001-01-01T00:00:00Z&quot;,<br>                &quot;updated_at&quot;: &quot;0001-01-01T00:00:00Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;&quot;,<br>                &quot;description&quot;: &quot;&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;66622a189fed436d8c62cec6a63ac5f4&quot;,<br>            &quot;name&quot;: &quot;java86&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;6a1052f0e7ee45cf956689b585d3997d&quot;,<br>            &quot;name&quot;: &quot;java no 346&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;73fae747887c4cceb2cdb9dbd25f6fef&quot;,<br>            &quot;name&quot;: &quot;java no 958&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;765b7424d596479cba3d8a3c1c16697b&quot;,<br>            &quot;name&quot;: &quot;java no 620&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;787851928949490e999ca3b6bb466077&quot;,<br>            &quot;name&quot;: &quot;java no 733&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;materi java 1&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;7e9dd3094cd94959846092a3c6581944&quot;,<br>            &quot;name&quot;: &quot;java no 213&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;8383a27bc7e6408390c7544c47309111&quot;,<br>            &quot;name&quot;: &quot;java no 142&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;87bf7955dd3146c595be4be80d719271&quot;,<br>            &quot;name&quot;: &quot;java no 141&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;89bb5df4ab7e4cea9ab76ba60a3a4924&quot;,<br>            &quot;name&quot;: &quot;testing11111&quot;,<br>            &quot;description&quot;: &quot;pembelajran bahasa java&quot;,<br>            &quot;objective&quot;: &quot;materi java&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 20,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;4481406aaa2d47e184c7535c7977243c&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-11T04:54:57.858Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-18T05:13:29.351Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;coba 3&quot;,<br>                &quot;description&quot;: &quot;programming language anaconda for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;9a2003c68f6b42de8b1eaa64b7b45082&quot;,<br>            &quot;name&quot;: &quot;java no 348&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;materi java 1&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;b1417e9495754df88310d520a571f712&quot;,<br>            &quot;name&quot;: &quot;java no 105&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;b8442e1dccdf4ead96d43df9ce28511a&quot;,<br>            &quot;name&quot;: &quot;java no 130&quot;,<br>            &quot;description&quot;: &quot;Pembelajaran mencari cinta sejati&quot;,<br>            &quot;objective&quot;: &quot;materi bucin&quot;,<br>            &quot;price&quot;: 15000,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;baa258c4d7fe4bb389a83c8afc104894&quot;,<br>            &quot;name&quot;: &quot;java no 547&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;bb114f140a524e2c96c27c0abcf81c07&quot;,<br>            &quot;name&quot;: &quot;java no 731&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;materi java 1&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 14,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 1<br>        },<br>        {<br>            &quot;id&quot;: &quot;bd6e3b6d05b5410886fcfda3738b5e2c&quot;,<br>            &quot;name&quot;: &quot;java no 550&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;be891133d3bd47daa2285dc4655cc7b7&quot;,<br>            &quot;name&quot;: &quot;testing111112&quot;,<br>            &quot;description&quot;: &quot;pembelajran bahasa java&quot;,<br>            &quot;objective&quot;: &quot;&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 20,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;4481406aaa2d47e184c7535c7977243c&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-11T04:54:57.858Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-18T05:13:29.351Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;coba 3&quot;,<br>                &quot;description&quot;: &quot;programming language anaconda for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;bf1f539ea765474885b62287460e5244&quot;,<br>            &quot;name&quot;: &quot;java no 114&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;materi java 1&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;bf42e8f5391a4fac840a49872e6f1e38&quot;,<br>            &quot;name&quot;: &quot;java no 200&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;materi java 1&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;bfcdaec71f6c449494fad0fcb3d22f9a&quot;,<br>            &quot;name&quot;: &quot;java no 614&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;materi java 1&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;c3f272781e14419ba70e3b1346f766dc&quot;,<br>            &quot;name&quot;: &quot;java no 486&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;materi java 1&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;c8455965b2154ec49b77a68ff13cce99&quot;,<br>            &quot;name&quot;: &quot;java no 134&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;materi java 1&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;d042093beb5e4628ac4e47c6588773ca&quot;,<br>            &quot;name&quot;: &quot;golang belajar&quot;,<br>            &quot;description&quot;: &quot;pembelajran bahasa golang&quot;,<br>            &quot;objective&quot;: &quot;materi golang belajar&quot;,<br>            &quot;price&quot;: 10000,<br>            &quot;discount&quot;: 100,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 10,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 1<br>        },<br>        {<br>            &quot;id&quot;: &quot;ea9dc349ce464f929494dc544f3a4c12&quot;,<br>            &quot;name&quot;: &quot;java no 210&quot;,<br>            &quot;description&quot;: &quot;pembelajaran bahasa java 1&quot;,<br>            &quot;objective&quot;: &quot;materi java 1&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 15,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        },<br>        {<br>            &quot;id&quot;: &quot;ed9e66056ead4723a1b6c8f43c8e04e8&quot;,<br>            &quot;name&quot;: &quot;coba atas nama naixxy&quot;,<br>            &quot;description&quot;: &quot;pembelajran bahasa cinta&quot;,<br>            &quot;objective&quot;: &quot;materi cinta yang sangat mujarab&quot;,<br>            &quot;price&quot;: 0,<br>            &quot;discount&quot;: 0,<br>            &quot;thumbnail&quot;: &quot;https://via.placeholder.com/150x100&quot;,<br>            &quot;capacity&quot;: 20,<br>            &quot;instructor_id&quot;: &quot;af14f04640da4e83abdb997d80a2fc1b&quot;,<br>            &quot;category&quot;: {<br>                &quot;id&quot;: &quot;188da0ffa87c4f5084f267d54937e43b&quot;,<br>                &quot;created_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;updated_at&quot;: &quot;2022-12-06T18:44:46Z&quot;,<br>                &quot;deleted_at&quot;: null,<br>                &quot;name&quot;: &quot;php&quot;,<br>                &quot;description&quot;: &quot;programming language php for industry&quot;,<br>                &quot;courses&quot;: null<br>            },<br>            &quot;rating&quot;: 0,<br>            &quot;number_of_modules&quot;: 0,<br>            &quot;amount_customer&quot;: 0<br>        }<br>    ],<br>    &quot;message&quot;: &quot;success get all courses&quot;<br>}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step"></span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="50" class="step-icon">
+                            <a name="2"></a>
+                                <span style="margin-left: 20px;"
+                                      class="top-level-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="top-level-step">
+                                                Then I receive valid HTTP respone code get all course
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">001ms</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="50" class="step-icon">
+                            <a name="3"></a>
+                                <span style="margin-left: 20px;"
+                                      class="top-level-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="top-level-step">
+                                                And I receive valid data for get all course
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">671ms</span></td>
+                    </tr>
+                <tr class="test-SUCCESS">
+                        <td colspan="2"></td>
+                    <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>0.92s</em></span></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <div id="beforefooter"></div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="version">Serenity BDD version 2.6.0</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function toggleDiv(divId) {
+            $("#" + divId).toggle();
+            var imgsrc = $(".img" + divId).attr('src');
+            if (imgsrc == 'images/plus.png') {
+                $(".img" + divId).attr("src", function () {
+                    return "images/minus.png";
+                });
+
+            } else {
+                $(".img" + divId).attr("src", function () {
+                    return "images/plus.png";
+                });
+            }
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+
+        $(document).ready(function () {
+            $('img.screenshot').imgPreview({
+                imgCSS: {
+                    width: '500px'
+                },
+                distanceFromCursor: {top: 10, left: -200}
+            });
+        });
+
+        //]]>
+    </script>
+    <div id="imgPreviewContainer" style="position: absolute; top: 612px; left: 355px; display: none; " class=""><img
+                src="" style="display: none; "></div>
+    <div id="imgPreviewContainer2" style="position: absolute; top: 925px; left: 320px; display: none; " class="">
+        <img style="width: 200px; display: none; " src=""></div>
+    <div id="imgPreviewWithStyles" style="position: absolute; top: 1272px; left: 321px; display: none; " class="">
+        <img style="height: 200px; opacity: 1; display: none; " src=""></div>
+    <div id="imgPreviewWithStyles2" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+    <div id="imgPreviewWithStyles3" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+
+</div>
+</body>
+</html>

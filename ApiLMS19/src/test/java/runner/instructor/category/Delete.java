@@ -9,9 +9,9 @@ public class Delete {
     private String url, token, id;
 
     public void setUrl(){
-        url = "http://13.213.47.36/instructor/category/delete/";
-        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzA5OTQwMDZ9.-94oZ0J_QAG8DatmV4Bp5UQSioTX0pLbrBB2EAkoUjs";
-        id = "b91e6fdf3e1249b7a4ae15c52cc9bcb1";
+        url = "https://gencer.live/instructor/category/delete/";
+        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzE2OTE4NzN9.O00LrDtNUKZuCJO2EVcrp68jhUsPUH4njJIhv9P9rls";
+        id = "b03ff61f8b5b483bac469fb25c60de1b";
     }
     public void requestDelete(){
         given().header("Authorization", "Bearer " + token)
@@ -21,6 +21,6 @@ public class Delete {
         then().statusCode(200);
     }
     public void validate200(){
-        then().body("message", equalTo("success delete account"));
+        then().body("message", equalTo("success delete category"));
     }
 }

@@ -19,6 +19,10 @@ public class UpdateStep {
     public void iSendPUTHTTPRequestForUpdateCourse(String name, String  desc, String objective, String catId, String token) {
         if (token.equals("ok")){
             u.requestUpdateBody(name, desc, objective, catId);
+        }else if (token.equals("inv")){
+            u.requestUpdateBodyInvalid(name, desc, objective, catId);
+        }else if (token.equals("invToken")){
+            u.requestUpdateBodyInvToken(name, desc, objective, catId);
         }
     }
 
@@ -26,6 +30,10 @@ public class UpdateStep {
     public void iReceiveValidHTTPResponeCodeUpdateCourse(String code) {
         if (code.equals("200")){
             u.verifStatusCode200();
+        }else if (code.equals("404")){
+            u.verifStatusCode404();
+        }else if(code.equals("400")){
+            u.verifStatusCode400();
         }
     }
 
@@ -33,6 +41,10 @@ public class UpdateStep {
     public void iReceiveValidDataForUpdateCourse(String status) {
         if (status.equals("ok")){
             u.validateBody200();
+        }else if (status.equals("inv")){
+            u.validateBody404();
+        }else if(status.equals("invToken")){
+            u.validateBody400();
         }
     }
 }

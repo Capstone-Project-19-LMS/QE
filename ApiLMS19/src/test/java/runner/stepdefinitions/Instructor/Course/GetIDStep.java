@@ -15,19 +15,32 @@ public class GetIDStep {
         gid.setUrl();
     }
 
-    @When("I send GET HTTP request for get course id")
-    public void iSendGETHTTPRequestForGetCourseId() {
-        gid.requestId();
+    @When("I send GET HTTP request for get course id {string}")
+    public void iSendGETHTTPRequestForGetCourseId(String id) {
+        if (id.equals("valid")){
+            gid.requestId();
+        }else if (id.equals("invalid")){
+            gid.requestIdInvalid();
+        }
     }
 
-    @Then("I receive valid HTTP respone code get course id")
-    public void iReceiveValidHTTPResponeCodeGetCourseId() {
-        gid.statusCode200();
+    @Then("I receive valid HTTP respone code get course id {string}")
+    public void iReceiveValidHTTPResponeCodeGetCourseId(String code) {
+        if (code.equals("200")){
+            gid.statusCode200();
+        }else if (code.equals("404")){
+            gid.statusCode404();
+        }
+
     }
 
-    @And("I receive valid data for get course id")
-    public void iReceiveValidDataForGetCourseId() {
-        gid.validate200();
+    @And("I receive valid data for get course id {string}")
+    public void iReceiveValidDataForGetCourseId(String code) {
+        if (code.equals("200")){
+            gid.validate200();
+        }else if (code.equals("404")){
+            gid.validate404();
+        }
     }
 
 

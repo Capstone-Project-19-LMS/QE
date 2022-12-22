@@ -6,21 +6,29 @@ import static org.hamcrest.Matchers.equalTo;
 
 
 public class GetID {
-    private String url, token, id;
+    private String url, token, id1,id2;
 
     public void setUrl(){
-        url ="http://13.213.47.36/instructor/course/get_by_id/";
-        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzA5OTQwMDZ9.-94oZ0J_QAG8DatmV4Bp5UQSioTX0pLbrBB2EAkoUjs";
-        id ="de9170a38caf4e588f6bef26b29b884d";
+        url ="https://gencer.live/instructor/course/get_by_id/";
+        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzE2OTk2NzR9.A8aX02Z2kV8S9oKbvzgpYoYq3QpDWlzUoXJgdWbScek";
+        id1 ="d042093beb5e4628ac4e47c6588773ca";
+        id2 ="d042093beb5e";
     }
     public void requestId(){
         given().header("Authorization", "Bearer " + token)
-                .when().get(url + id);
+                .when().get(url + id1);
+    }
+    public void requestIdInvalid(){
+        given().header("Authorization", "Bearer " + token)
+                .when().get(url + id2);
     }
     public void statusCode200(){
         then().statusCode(200);
     }
+    public void statusCode404(){then().statusCode(404);}
+
     public void validate200(){
         then().body("message", equalTo("success get course by id"));
     }
+    public void validate404(){then().body("message", equalTo("fail get course by id"));}
 }
