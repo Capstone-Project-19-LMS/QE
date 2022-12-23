@@ -148,7 +148,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Category","type":"feature","href":"ef4750698687de23df0888b1de5849b457ab1cf84885b60c67ba35aea4e820e8.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027fa fa-check-circle-o success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e5 scenarios\u003c/span\u003e"]}];
+            var requirementsTree = [{"text":"Category","type":"feature","href":"ef4750698687de23df0888b1de5849b457ab1cf84885b60c67ba35aea4e820e8.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027fa fa-times-circle failure-icon \u0027 title\u003d\u0027FAILURE\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e5 scenarios\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -222,7 +222,7 @@
             <a href="#"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 23-12-2022 16:25</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 23-12-2022 17:35</span>
     <br style="clear:left"/>
 </div>
 
@@ -345,7 +345,7 @@ So I can manage category
                                                                                             <a style="margin-left:0.5em;padding-right: 1.5em;"
                                                                                                href="eeec3bd21779bbc9dd05913478540d0187db5fb4eaf1243bac9eae7e29297031.html"
                                                                                                title="View test results">
-                                                                                                <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                                                                <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a>
                                                                                                 </a>
 
 
@@ -460,7 +460,7 @@ So I can manage category
 
                                                     <h3>Scenarios</h3>
 
-                                                        <a name="5d7c0e7f-cd09-4482-87c1-45001c1a9a79" ></a>
+                                                        <a name="4efd8c6f-39a6-4f2d-a3d4-3e80463f18b3" ></a>
 
 
                                                             <div class="scenario-docs card" id="60123d620c6a88e323fe8d0b1810279dfd1ecec009ae8f28772a2aa10c8cbc05">
@@ -489,7 +489,7 @@ So I can manage category
                                                             </div>
 
                                                             <div class="scenario-docs card" id="8ca2d658d27f317fe98eacadf76e8cb010d50b19ddb023dabd03582a89361a79">
-                                                                <div class="scenario-docs card-header success"
+                                                                <div class="scenario-docs card-header failure"
                                                                      style="min-height:1.5em;">
                                                                     <div>
                                                             <span class="scenario-heading">
@@ -499,7 +499,7 @@ So I can manage category
                                                                         <span class="scenario-result-icon">
                                                                 
 
-                                                                                <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                                                <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a>
                                                             </span>
                                                                     </div>
                                                                 </div>
@@ -602,10 +602,10 @@ So I can manage category
                                                 </div>
                                                 <script>
 
-                                                    var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+                                                    var labels = ['80%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '20%', ' ', ' ', ' ', ' ', ' '];
                                                     // Our series array that contains series objects or in this case series data arrays
 
-                                                    var series = [{meta: 'Passing tests (automated)', value: 5}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+                                                    var series = [{meta: 'Passing tests (automated)', value: 4}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 1}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
 
                                                     // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
                                                     // as you saw in the previous example
@@ -648,8 +648,8 @@ So I can manage category
                                                                     <a href="52ffe27e1f2e7b15349fc83336e09bcaf88d02536397e0d596848f96e40aca5c.html"><i
                                                                                 class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
                                                                 </td>
-                                                            <td class="automated-stats">5</td>
-                                                            <td class="automated-stats">100%</td>
+                                                            <td class="automated-stats">4</td>
+                                                            <td class="automated-stats">80%</td>
                                                         </tr>
                                                         <tr>
                                                                 <td class="aggregate-result-count"><i
@@ -673,19 +673,19 @@ So I can manage category
                                                             <td class="automated-stats"> </td>
                                                         </tr>
                                                         <tr>
-                                                                    <td colspan="3"><i
-                                                                                class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
+                                                                    <td colspan="3"><a href="9525db2ea0ad27cf90d059f4f9b4652aeacf29224f6cc9f88d9fc2af10965528.html"><i
+                                                                                    class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
                                                                     </td>
 
                                                         </tr>
 
                                                         <tr>
                                                                 <td class="aggregate-result-count indented-error-category">
-                                                                    <i
-                                                                            class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
+                                                                    <a href="8a422e2daa4b3b2a48239ace9cd078dd56a042a069924f6600c761a187eaf151.html"><i
+                                                                                class='fa fa-times-circle failure-icon'></i>&nbsp;Failed</a>
                                                                 </td>
-                                                            <td class="automated-stats">0</td>
-                                                            <td class="automated-stats"> </td>
+                                                            <td class="automated-stats">1</td>
+                                                            <td class="automated-stats">20%</td>
                                                         <tr>
                                                                 <td class="aggregate-result-count indented-error-category">
                                                                     <i
@@ -725,10 +725,10 @@ So I can manage category
                                                         </thead>
                                                         <tbody>
                                                         <tr>
+                                                            <td>7s</td>
+                                                            <td>6s</td>
+                                                            <td>245ms</td>
                                                             <td>5s</td>
-                                                            <td>5s</td>
-                                                            <td>213ms</td>
-                                                            <td>4s</td>
                                                             <td>1s</td>
                                                         </tr>
                                                         </tbody>
@@ -758,23 +758,23 @@ So I can manage category
                                                                             <a href="ddee21e0ab385da582e84c3bffd571f2a078e425557ca55202642df65f142623.html">POST - Create Category</a>
                                                                     </td>
                                                                     <td>4</td>
-                                                                    <td>16:25:51</td>
-                                                                    <td>4s 351ms</td>
+                                                                    <td>17:35:17</td>
+                                                                    <td>5s 910ms</td>
                                                                     <td>
                                                                             <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
                                                                                 style="display:none">SUCCESS</span>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="scenario-result SUCCESS">
+                                                                <tr class="scenario-result FAILURE">
                                                                     <td>
                                                                             <a href="eeec3bd21779bbc9dd05913478540d0187db5fb4eaf1243bac9eae7e29297031.html">DEL - Delete Category</a>
                                                                     </td>
                                                                     <td>4</td>
-                                                                    <td>16:25:56</td>
-                                                                    <td>236ms</td>
+                                                                    <td>17:35:23</td>
+                                                                    <td>429ms</td>
                                                                     <td>
-                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
-                                                                                style="display:none">SUCCESS</span>
+                                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a> <span
+                                                                                style="display:none">FAILURE</span>
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="scenario-result SUCCESS">
@@ -782,8 +782,8 @@ So I can manage category
                                                                             <a href="2918c5b78e1fd5e9ff0d1c8afd47d9d0b30db2d8e9f29a3db790c7d7450f9de5.html">GET - Get all Category</a>
                                                                     </td>
                                                                     <td>4</td>
-                                                                    <td>16:25:56</td>
-                                                                    <td>243ms</td>
+                                                                    <td>17:35:24</td>
+                                                                    <td>276ms</td>
                                                                     <td>
                                                                             <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
                                                                                 style="display:none">SUCCESS</span>
@@ -794,8 +794,8 @@ So I can manage category
                                                                             <a href="876f14f40d5918609640cb4ecfe5ce3ea4ccc2537b0b12ec8aa70dff17a3eb63.html">GET - Get Category Id</a>
                                                                     </td>
                                                                     <td>4</td>
-                                                                    <td>16:25:56</td>
-                                                                    <td>229ms</td>
+                                                                    <td>17:35:24</td>
+                                                                    <td>252ms</td>
                                                                     <td>
                                                                             <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
                                                                                 style="display:none">SUCCESS</span>
@@ -806,8 +806,8 @@ So I can manage category
                                                                             <a href="8396c4de5cf3551f6dd0069076f24e4788fe09452714106d2fd4ce075a6c57a1.html">PUT - Update Category</a>
                                                                     </td>
                                                                     <td>4</td>
-                                                                    <td>16:25:56</td>
-                                                                    <td>213ms</td>
+                                                                    <td>17:35:24</td>
+                                                                    <td>245ms</td>
                                                                     <td>
                                                                             <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
                                                                                 style="display:none">SUCCESS</span>

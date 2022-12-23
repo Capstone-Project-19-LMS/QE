@@ -12,12 +12,12 @@ public class UpdateEnroll {
     public void setUrl(){
         url ="https://gencer.live/instructor/course/enroll/update/";
         token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzE3OTQyMTh9.EjAHxkRYn9GbrCYhfiyTedSwq7JHBPyTE-BR1oDo_AU";
-        id = "0fd47b533e1e46318dcab63761d95eb7";
+        id = "7bffab9755764cfba84f1b009b80be38";
     }
     public JSONObject bodyUpdate(){
         JSONObject body = new JSONObject();
-        body.put("customer_id", "67d9c7fec2a44237919a8caee5b37555");
-        body.put("status", true);
+//        body.put("customer_id", "67d9c7fec2a44237919a8caee5b37555");
+        body.put("status_enroll", true);
         return body;
     }
     public void requestUpdateEnroll(){

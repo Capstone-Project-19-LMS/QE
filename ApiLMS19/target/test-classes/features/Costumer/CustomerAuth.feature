@@ -1,7 +1,7 @@
-Feature: Customer Auth
-  As an customer
-  I want to authenticate
-  So that I can use another feature
+#Feature: Customer Auth
+#  As an customer
+#  I want to authenticate
+#  So that I can use another feature
 
 
 #  Scenario Outline: POST - As customer I have be able to create new account

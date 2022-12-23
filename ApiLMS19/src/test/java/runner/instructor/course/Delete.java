@@ -10,7 +10,7 @@ public class Delete {
     public void setUrl(){
         url = "https://gencer.live/instructor/course/delete/";
         token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzE3OTQyMTh9.EjAHxkRYn9GbrCYhfiyTedSwq7JHBPyTE-BR1oDo_AU";
-        id1="4a3d3b08f9ee4ce0aea83934045eeb50";
+        id1="ea9dc349ce464f929494dc544f3a4c12";
         id2="b37464868bca4203ae130d873a409e201";
     }
     public void requestDelete(){
