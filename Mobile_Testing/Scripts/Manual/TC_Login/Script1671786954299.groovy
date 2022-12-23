@@ -36,12 +36,15 @@ for (i = 1; i <= x; i++) {
 
     if (findTestData('Login').getValue(2, i) == 'bixil79242') {
         Mobile.verifyElementExist(findTestObject('homepage/home_title'), 5)
+    } else if (findTestData('Login').getValue(2, i) == 'kraken123') {
     } else {
         Mobile.verifyElementExist(findTestObject('loginpage/error_message'), 5)
 
         Mobile.tap(findTestObject('loginpage/error_ok_Button'), 3)
     }
 }
+
+Mobile.tap(findTestObject('intropage/skip_page_Button'), 3)
 
 Mobile.closeApplication()
 

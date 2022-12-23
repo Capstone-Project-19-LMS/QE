@@ -1,0 +1,24 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+User Registration,,,,2022-12-23 17:34:45,2022-12-23 17:37:01,2m - 15.320s,FAILED
+,,,,,,,
+Test Cases/Manual/TC_Register_Invalid,,,,2022-12-23 17:34:46,2022-12-23 17:35:32,46.668s,FAILED
+"x = findTestData(""Register"").getRowNumbers()",,,,2022-12-23 17:34:46,2022-12-23 17:34:46,0.043s,PASSED
+"startApplication(app_name, true)",,,,2022-12-23 17:34:46,2022-12-23 17:35:23,36.692s,PASSED
+"tap(findTestObject(""intropage/next_intro_Button""), 3)",,,,2022-12-23 17:35:23,2022-12-23 17:35:24,0.816s,PASSED
+"tap(findTestObject(""intropage/next_intro2_Button""), 3)",,,,2022-12-23 17:35:24,2022-12-23 17:35:26,1.747s,PASSED
+"tap(findTestObject(""intropage/skip_page_Button""), 3)",,,,2022-12-23 17:35:26,2022-12-23 17:35:27,1.392s,PASSED
+device_Height = getDeviceHeight(),,,,2022-12-23 17:35:27,2022-12-23 17:35:27,0.169s,PASSED
+device_Width = getDeviceWidth(),,,,2022-12-23 17:35:27,2022-12-23 17:35:27,0.144s,PASSED
+startX = device_Width / 2,,"Storing the startX,endX values by dividing device height by 2 Because Y coordinates are constant",,2022-12-23 17:35:27,2022-12-23 17:35:27,0.006s,PASSED
+endX = startX,,Here endY and startY values are equal for vertical Swiping for that assigning startY value to endY,,2022-12-23 17:35:27,2022-12-23 17:35:27,0.002s,PASSED
+startY = device_Height * 0.30,,Storing the startY value,,2022-12-23 17:35:27,2022-12-23 17:35:27,0.003s,PASSED
+endY = device_Height * 0.70,,Storing the endY value,,2022-12-23 17:35:27,2022-12-23 17:35:27,0.001s,PASSED
+"swipe(startX, startY, endX, endY)",,Here X constant for Swipe Horizontal,,2022-12-23 17:35:27,2022-12-23 17:35:29,1.083s,PASSED
+"tap(findTestObject(""loginpage/to_register_page_Button""), 3)",,,,2022-12-23 17:35:29,2022-12-23 17:35:32,3.970s,FAILED
+,,,,,,,
+Test Cases/Manual/TC_Login,,,,2022-12-23 17:35:33,2022-12-23 17:37:01,1m - 28.230s,FAILED
+"x = findTestData(""Login"").getRowNumbers()",,,,2022-12-23 17:35:33,2022-12-23 17:35:33,0.005s,PASSED
+"startApplication(app_name, true)",,,,2022-12-23 17:35:33,2022-12-23 17:36:03,30.533s,PASSED
+"tap(findTestObject(""intropage/next_intro_Button""), 3)",,,,2022-12-23 17:36:03,2022-12-23 17:36:06,2.136s,PASSED
+"tap(findTestObject(""intropage/next_intro2_Button""), 3)",,,,2022-12-23 17:36:06,2022-12-23 17:36:08,2.699s,PASSED
+"for ([i = 1, i <= x, (i++)])",,,,2022-12-23 17:36:08,2022-12-23 17:37:01,52.324s,FAILED

@@ -26,21 +26,44 @@ Mobile.tap(findTestObject('intropage/next_intro_Button'), 3)
 Mobile.tap(findTestObject('intropage/next_intro2_Button'), 3)
 
 Mobile.tap(findTestObject('intropage/skip_page_Button'), 3)
-
-Mobile.scrollToText('Daftar', FailureHandling.STOP_ON_FAILURE)
+ 
+device_Height = Mobile.getDeviceHeight()
+ 
+device_Width = Mobile.getDeviceWidth()
+ 
+ 
+ 
+'Storing the startX,endX values by dividing device height by 2 Because Y coordinates are constant'
+ 
+int startX = device_Width / 2
+ 
+ 
+ 
+'Here endY and startY values are equal for vertical Swiping for that assigning startY value to endY'
+ 
+int endX = startX
+ 
+ 
+'Storing the startY value'
+ 
+int startY = device_Height * 0.30
+ 
+ 
+'Storing the endY value'
+ 
+int endY = device_Height * 0.70
+ 
+ 
+'Here X constant for Swipe Horizontal'
+ 
+Mobile.swipe(startX, startY, endX, endY)
 
 Mobile.tap(findTestObject('loginpage/to_register_page_Button'), 3)
 
 for (i = 1; i <= x; i++) {
-    Mobile.tap(findTestObject('registerpage/name_txt'), 3)
-
     Mobile.setText(findTestObject('registerpage/name_txt'), findTestData('Register').getValue(1, i), 0)
 
-    Mobile.tap(findTestObject('registerpage/email_txt'), 3)
-
     Mobile.setText(findTestObject('registerpage/email_txt'), findTestData('Register').getValue(2, i), 0)
-
-    Mobile.tap(findTestObject('registerpage/password_txt'), 3)
 
     Mobile.setText(findTestObject('registerpage/password_txt'), findTestData('Register').getValue(3, i), 0)
 

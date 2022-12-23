@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC_004_Login_Valid</name>
+   <name>TC_Register_Invalid</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>d7df0281-1eed-4e1a-9da8-e74613eeb68a</testCaseGuid>
+   <testCaseGuid>60655e5e-19fd-4137-ae50-e48a3eb2dab0</testCaseGuid>
 </TestCaseEntity>
