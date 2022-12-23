@@ -38,7 +38,7 @@ public class RegisterStep {
         }else if (status.equals("dup")){
             r.validateBodyDuplicate();
         }else if(status.equals("fail")){
-            r.verifStatusCode400();
+            r.validateBody400();
         }
     }
 }

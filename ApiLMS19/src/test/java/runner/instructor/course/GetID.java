@@ -10,7 +10,7 @@ public class GetID {
 
     public void setUrl(){
         url ="https://gencer.live/instructor/course/get_by_id/";
-        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzE2OTk2NzR9.A8aX02Z2kV8S9oKbvzgpYoYq3QpDWlzUoXJgdWbScek";
+        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzE3OTQyMTh9.EjAHxkRYn9GbrCYhfiyTedSwq7JHBPyTE-BR1oDo_AU";
         id1 ="d042093beb5e4628ac4e47c6588773ca";
         id2 ="d042093beb5e";
     }

@@ -1,4 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: Manage Costumer who enrolled in the course
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.787 s - in Manage Costumer who enrolled in the course
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 4.439 s <<< FAILURE! - in Manage Costumer who enrolled in the course
+Manage Costumer who enrolled in the course.GET - Enroll costumer  Time elapsed: 4.054 s  <<< ERROR!
+net.serenitybdd.core.exceptions.SerenityManagedException: 
+1 expectation failed.
+Expected status code <200> but was <500>.
+
+
+Manage Costumer who enrolled in the course.PUT - Update enroll  Time elapsed: 0.299 s  <<< ERROR!
+net.serenitybdd.core.exceptions.SerenityManagedException: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+

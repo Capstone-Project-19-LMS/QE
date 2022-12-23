@@ -10,8 +10,8 @@ public class Delete {
 
     public void setUrl(){
         url = "https://gencer.live/instructor/category/delete/";
-        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzE2OTE4NzN9.O00LrDtNUKZuCJO2EVcrp68jhUsPUH4njJIhv9P9rls";
-        id = "b03ff61f8b5b483bac469fb25c60de1b";
+        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzE3OTQyMTh9.EjAHxkRYn9GbrCYhfiyTedSwq7JHBPyTE-BR1oDo_AU";
+        id = "f489cda429e04c01b51ad6aa67818146";
     }
     public void requestDelete(){
         given().header("Authorization", "Bearer " + token)

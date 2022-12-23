@@ -11,7 +11,7 @@ public class Update {
     private String url, token, id1, id2;
     public void setUrl(){
         url ="https://gencer.live/instructor/course/update/";
-        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzE2OTk2NzR9.A8aX02Z2kV8S9oKbvzgpYoYq3QpDWlzUoXJgdWbScek";
+        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzE3OTQyMTh9.EjAHxkRYn9GbrCYhfiyTedSwq7JHBPyTE-BR1oDo_AU";
         id1 ="b8442e1dccdf4ead96d43df9ce28511a";
         id2 ="de9170a38caf4e588f6bef26b29b884d";
     }

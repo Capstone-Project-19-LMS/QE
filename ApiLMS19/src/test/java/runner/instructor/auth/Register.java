@@ -44,13 +44,13 @@ public class Register {
         then().statusCode(500);
     }
     public void validateBody(){
-        then().body("message", equalTo("success create user"));
+        then().body("message", equalTo("success create instructor"));
     }
 
     public void validateBody400(){
         then().body("message", equalTo("There is an empty field"));
     }
     public void validateBodyDuplicate(){
-        then().body("message", equalTo("fail create user"));
+        then().body("message", equalTo("fail create instructor"));
     }
 }

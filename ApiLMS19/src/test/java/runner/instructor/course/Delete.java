@@ -9,8 +9,8 @@ public class Delete {
     private String url, token, id1, id2;
     public void setUrl(){
         url = "https://gencer.live/instructor/course/delete/";
-        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzE2OTk2NzR9.A8aX02Z2kV8S9oKbvzgpYoYq3QpDWlzUoXJgdWbScek";
-        id1="add39f035bb6457f9cc7b4a3ff5156ed";
+        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmMTRmMDQ2NDBkYTRlODNhYmRiOTk3ZDgwYTJmYzFiIiwicm9sZSI6Imluc3RydWN0b3IiLCJleHAiOjE2NzE3OTQyMTh9.EjAHxkRYn9GbrCYhfiyTedSwq7JHBPyTE-BR1oDo_AU";
+        id1="4a3d3b08f9ee4ce0aea83934045eeb50";
         id2="b37464868bca4203ae130d873a409e201";
     }
     public void requestDelete(){

@@ -148,7 +148,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [];
+            var requirementsTree = [{"text":"Customer Auth","type":"feature","href":"739d3a5d7da562c893a1be996706f8494155893e6884e840ca9e18676311c18d.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027far fa-stop-circle pending-icon \u0027 title\u003d\u0027PENDING\u0027\u003e\u003c/i\u003e\u003c/a\u003e",""]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -274,9 +274,15 @@ So that I can use another feature
                                         <div class="row">
                                             <div class="col-sm-12">
 
-                                                    <h3>Requirements Overview</h3>
+                                                    <!--- TOC --->
+                                                    <div id="toc">
+                                                        <h3>Overview</h3>
+                                                        <table class="table" id="toc-table">
+                                                        </table>
+                                                    </div>
+                                                    <!--- END OF TOC --->
 
-                                                    <div id="tree"></div>
+                                                    <h3>Scenarios</h3>
 
                                             </div>
                                         </div>
