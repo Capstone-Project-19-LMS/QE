@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: Category
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.589 s - in Category
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 7.562 s <<< FAILURE! - in Category
+Category.DEL - Delete Category  Time elapsed: 0.365 s  <<< ERROR!
+net.serenitybdd.core.exceptions.SerenityManagedException: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+

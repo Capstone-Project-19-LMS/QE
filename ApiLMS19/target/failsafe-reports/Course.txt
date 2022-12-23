@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: Course
 -------------------------------------------------------------------------------
-Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.962 s - in Course
+Tests run: 17, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 10.105 s <<< FAILURE! - in Course
+Course.DEL - As instructor Delete Course #1  Time elapsed: 0.263 s  <<< ERROR!
+net.serenitybdd.core.exceptions.SerenityManagedException: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+

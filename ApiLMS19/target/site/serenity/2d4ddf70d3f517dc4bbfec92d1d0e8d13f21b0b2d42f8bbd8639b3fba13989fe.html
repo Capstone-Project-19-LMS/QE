@@ -148,7 +148,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Course","type":"feature","href":"2d4ddf70d3f517dc4bbfec92d1d0e8d13f21b0b2d42f8bbd8639b3fba13989fe.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027fa fa-check-circle-o success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e5 scenarios\u003c/span\u003e"]}];
+            var requirementsTree = [{"text":"Course","type":"feature","href":"2d4ddf70d3f517dc4bbfec92d1d0e8d13f21b0b2d42f8bbd8639b3fba13989fe.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027fa fa-times-circle failure-icon \u0027 title\u003d\u0027FAILURE\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e5 scenarios\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -222,7 +222,7 @@
             <a href="#"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 23-12-2022 16:25</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 23-12-2022 17:35</span>
     <br style="clear:left"/>
 </div>
 
@@ -347,7 +347,7 @@ So I can manage my course instructor
                                                                                             <a style="margin-left:0.5em;padding-right: 1.5em;"
                                                                                                href="aab48271dd60c5e576c09823159382988706eae0e45b523c3773da898028d2a9.html"
                                                                                                title="View test results">
-                                                                                                <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                                                                <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a>
                                                                                                 </a>
 
 
@@ -464,7 +464,7 @@ So I can manage my course instructor
 
                                                     <h3>Scenarios</h3>
 
-                                                        <a name="70227adb-9f5a-48d9-bbf9-290fb717f69f" ></a>
+                                                        <a name="1a65bbd2-494c-4c41-ba51-0035513f9edc" ></a>
 
 
                                                             <div class="scenario-docs card" id="d35c94358c069c6363e588f9232b9e81c66dcf69b576c45d2e10a01473c54f52">
@@ -512,7 +512,7 @@ So I can manage my course instructor
                                                             </div>
 
                                                             <div class="scenario-docs card" id="f99385903f638a5b3044170b055b487fb14bc891a96d0a6ae8c1a8188fcc0ea6">
-                                                                <div class="scenario-docs card-header success"
+                                                                <div class="scenario-docs card-header failure"
                                                                      style="min-height:1.5em;">
                                                                     <div>
                                                             <span class="scenario-heading">
@@ -522,7 +522,7 @@ So I can manage my course instructor
                                                                         <span class="scenario-result-icon">
                                                                 
 
-                                                                                <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                                                <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a>
                                                             </span>
                                                                     </div>
                                                                 </div>
@@ -540,7 +540,7 @@ So I can manage my course instructor
 <tr><th>status</th><th>code</th><th></th></tr>
 </thead>
 <tbody>
-<tr><td>ok</td><td>200</td><td><a href='aab48271dd60c5e576c09823159382988706eae0e45b523c3773da898028d2a9.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
+<tr><td>ok</td><td>200</td><td><a href='aab48271dd60c5e576c09823159382988706eae0e45b523c3773da898028d2a9.html#beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a></td></tr>
 <tr><td>inv</td><td>404</td><td><a href='aab48271dd60c5e576c09823159382988706eae0e45b523c3773da898028d2a9.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
 <tr><td>invToken</td><td>400</td><td><a href='aab48271dd60c5e576c09823159382988706eae0e45b523c3773da898028d2a9.html#beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a></td></tr>
 </tbody>
@@ -666,10 +666,10 @@ So I can manage my course instructor
                                                 </div>
                                                 <script>
 
-                                                    var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+                                                    var labels = ['94%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '6%', ' ', ' ', ' ', ' ', ' '];
                                                     // Our series array that contains series objects or in this case series data arrays
 
-                                                    var series = [{meta: 'Passing tests (automated)', value: 17}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+                                                    var series = [{meta: 'Passing tests (automated)', value: 16}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 1}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
 
                                                     // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
                                                     // as you saw in the previous example
@@ -712,8 +712,8 @@ So I can manage my course instructor
                                                                     <a href="dd1ae59e613c32ec42cee661267566badaefd85518740442b11018a413b7c75e.html"><i
                                                                                 class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
                                                                 </td>
-                                                            <td class="automated-stats">17</td>
-                                                            <td class="automated-stats">100%</td>
+                                                            <td class="automated-stats">16</td>
+                                                            <td class="automated-stats">94%</td>
                                                         </tr>
                                                         <tr>
                                                                 <td class="aggregate-result-count"><i
@@ -737,19 +737,19 @@ So I can manage my course instructor
                                                             <td class="automated-stats"> </td>
                                                         </tr>
                                                         <tr>
-                                                                    <td colspan="3"><i
-                                                                                class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
+                                                                    <td colspan="3"><a href="92203d673d192565e5a624d19870bd4cd5540343f0ac1d16666591ce837bd055.html"><i
+                                                                                    class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
                                                                     </td>
 
                                                         </tr>
 
                                                         <tr>
                                                                 <td class="aggregate-result-count indented-error-category">
-                                                                    <i
-                                                                            class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
+                                                                    <a href="213aab22c0fe060c5120e4a94005950098ff8f5128dc7f9970c6fde9f59e5ea2.html"><i
+                                                                                class='fa fa-times-circle failure-icon'></i>&nbsp;Failed</a>
                                                                 </td>
-                                                            <td class="automated-stats">0</td>
-                                                            <td class="automated-stats"> </td>
+                                                            <td class="automated-stats">1</td>
+                                                            <td class="automated-stats">6%</td>
                                                         <tr>
                                                                 <td class="aggregate-result-count indented-error-category">
                                                                     <i
@@ -789,10 +789,10 @@ So I can manage my course instructor
                                                         </thead>
                                                         <tbody>
                                                         <tr>
-                                                            <td>7s</td>
-                                                            <td>6s</td>
-                                                            <td>184ms</td>
-                                                            <td>3s</td>
+                                                            <td>9s</td>
+                                                            <td>8s</td>
+                                                            <td>182ms</td>
+                                                            <td>4s</td>
                                                             <td>1s</td>
                                                         </tr>
                                                         </tbody>
@@ -823,24 +823,24 @@ So I can manage my course instructor
                                                                             (8 examples)
                                                                     </td>
                                                                     <td>4</td>
-                                                                    <td>16:25:51</td>
-                                                                    <td>5s 274ms</td>
+                                                                    <td>17:35:18</td>
+                                                                    <td>6s 601ms</td>
                                                                     <td>
                                                                             <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
                                                                                 style="display:none">SUCCESS</span>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="scenario-result SUCCESS">
+                                                                <tr class="scenario-result FAILURE">
                                                                     <td>
                                                                             <a href="aab48271dd60c5e576c09823159382988706eae0e45b523c3773da898028d2a9.html">DEL - As instructor Delete Course</a>
                                                                             (3 examples)
                                                                     </td>
                                                                     <td>4</td>
-                                                                    <td>16:25:57</td>
-                                                                    <td>613ms</td>
+                                                                    <td>17:35:24</td>
+                                                                    <td>698ms</td>
                                                                     <td>
-                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
-                                                                                style="display:none">SUCCESS</span>
+                                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a> <span
+                                                                                style="display:none">FAILURE</span>
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="scenario-result SUCCESS">
@@ -848,8 +848,8 @@ So I can manage my course instructor
                                                                             <a href="479caa8b016b5766981d7e1d4790bd307e70c1fe516b7e3e3c7663038c08dd9f.html">GET - As instructor get all course</a>
                                                                     </td>
                                                                     <td>4</td>
-                                                                    <td>16:25:57</td>
-                                                                    <td>356ms</td>
+                                                                    <td>17:35:25</td>
+                                                                    <td>298ms</td>
                                                                     <td>
                                                                             <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
                                                                                 style="display:none">SUCCESS</span>
@@ -861,8 +861,8 @@ So I can manage my course instructor
                                                                             (2 examples)
                                                                     </td>
                                                                     <td>4</td>
-                                                                    <td>16:25:58</td>
-                                                                    <td>432ms</td>
+                                                                    <td>17:35:25</td>
+                                                                    <td>525ms</td>
                                                                     <td>
                                                                             <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
                                                                                 style="display:none">SUCCESS</span>
@@ -874,8 +874,8 @@ So I can manage my course instructor
                                                                             (3 examples)
                                                                     </td>
                                                                     <td>4</td>
-                                                                    <td>16:25:58</td>
-                                                                    <td>776ms</td>
+                                                                    <td>17:35:26</td>
+                                                                    <td>1s 299ms</td>
                                                                     <td>
                                                                             <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
                                                                                 style="display:none">SUCCESS</span>
